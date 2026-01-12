@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Dining - Vibing Sarasota</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-category="fine-dining">
+<!-- Navigation -->
+<nav class="main-navigation">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="index-2.html" class="brand-link">
+                <span class="brand-icon">🌴</span>
+                <span class="brand-text">Vibing Sarasota</span>
+            </a>
+        </div>
+        <div class="nav-links desktop-nav">
+            <a href="index-2.html" class="nav-link">All Categories</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle active">Food & Dining</a>
+                <div class="dropdown-menu">
+                    <a href="food-services.html" class="dropdown-link">Food Services</a>
+                    <a href="fine-dining.html" class="dropdown-link active">Fine Dining</a>
+                    <a href="party-vibe.html" class="dropdown-link">Party Vibe</a>
+                </div>
+            </div>
+            <a href="med-spas.html" class="nav-link">Med Spas</a>
+            <a href="golf-courses.html" class="nav-link">Golf</a>
+            <a href="movie-theaters.html" class="nav-link">Movies</a>
+            <a href="meet-people.html" class="nav-link">Meet People</a>
+            <a href="st-armands.html" class="nav-link">St. Armands</a>
+            <a href="beaches.html" class="nav-link">Beaches</a>
+            <a href="family-activities.html" class="nav-link">Family</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+                <a href="index-2.html" class="breadcrumb-link">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-category">Fine Dining</span>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Category Header -->
+    <header class="category-header">
+        <div class="category-icon">✨</div>
+        <h1>Fine Dining</h1>
+        <p class="category-description">
+            Discover Sarasota's best fine dining restaurants for special occasions.
+            From romantic waterfront dining to award-winning chef-driven cuisine and premium steakhouses.
+        </p>
+    </header>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+                type="text"
+                id="search"
+                placeholder="Search fine dining restaurants..."
+                aria-label="Search businesses"
+        >
+    </section>
+
+    <!-- Business List -->
+    <main class="business-list" id="business-list">
+        <!-- Populated dynamically by business.js -->
+    </main>
+
+    <!-- Related Categories -->
+    <section class="related-categories">
+        <h2>Related Food Categories</h2>
+        <div class="related-categories-grid">
+            <a href="food-services.html" class="related-category-card">
+                <div class="related-category-icon">🥗</div>
+                <h3>Food Services</h3>
+                <p>Meal prep, delivery & personal chefs</p>
+            </a>
+            <a href="party-vibe.html" class="related-category-card">
+                <div class="related-category-icon">🎉</div>
+                <h3>Party Vibe</h3>
+                <p>Lively dining & nightlife spots</p>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Vibing Sarasota</h3>
+                <p>Discover the best local businesses in Sarasota through questions answered like a local friend would.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Food & Dining</h4>
+                <ul>
+                    <li><a href="food-services.html">Food Services</a></li>
+                    <li><a href="fine-dining.html">Fine Dining</a></li>
+                    <li><a href="party-vibe.html">Party Vibe</a></li>
+                </ul>
+                <h4>Other Categories</h4>
+                <ul>
+                    <li><a href="med-spas.html">Med Spas</a></li>
+                    <li><a href="golf-courses.html">Golf Courses</a></li>
+                    <li><a href="movie-theaters.html">Movie Theaters</a></li>
+                    <li><a href="st-armands.html">St. Armands Circle</a></li>
+                    <li><a href="beaches.html">Beaches</a></li>
+                    <li><a href="family-activities.html">Family Activities</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>About</h4>
+                <p>Local recommendations for Sarasota, FL</p>
+                <p>Curated by locals, for locals and visitors</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vibing Sarasota. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/shared.js"></script>
+<script src="js/business.js"></script>
+</body>
+</html>

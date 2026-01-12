@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from vibingsarasota.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 14:33:33 GMT -->
+<head>
+  <!-- Google Consent Mode v2 - Must load before GTM -->
+  <script>
+    // Initialize dataLayer before any other scripts
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Set default consent states (denied until user provides consent)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted'
+    });
+
+    // Check for existing consent preferences
+    const consentPreferences = localStorage.getItem('vibing_sarasota_consent');
+    if (consentPreferences) {
+      try {
+        const consent = JSON.parse(consentPreferences);
+        if (consent.analytics === true) {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+        if (consent.marketing === true) {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+          });
+        }
+      } catch (e) {
+        console.warn('Error parsing consent preferences:', e);
+      }
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PX68MSTT');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibing Sarasota - Discover the Best Local Businesses & Services in Sarasota, FL</title>
+  <!-- Enhanced meta description for SEO -->
+  <meta name="description" content="Discover Sarasota's best local businesses across 10 categories. Find food services, med spas, golf courses, entertainment, beaches, and family activities recommended by locals.">
+  <meta name="keywords" content="Sarasota businesses, local services, Sarasota restaurants, med spas, golf courses, movie theaters, St Armands Circle, beaches, family activities">
+  <!-- Mobile optimization meta tags -->
+  <meta name="theme-color" content="#1E3A8A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link href="../fonts.googleapis.com/css239d4.css?family=Roboto:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/consent-banner.css">
+</head>
+<body class="hub-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX68MSTT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- GDPR Consent Banner -->
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-description">
+    <div class="consent-content">
+      <div class="consent-text">
+        <h3 id="consent-title">🍪 We value your privacy</h3>
+        <p id="consent-description">
+          We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and provide personalized content.
+          You can choose which types of cookies to accept.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <div class="consent-buttons">
+          <button id="consent-accept-all" class="consent-btn consent-btn-primary" type="button">
+            Accept All
+          </button>
+          <button id="consent-reject-all" class="consent-btn consent-btn-secondary" type="button">
+            Reject All
+          </button>
+          <button id="consent-customize" class="consent-btn consent-btn-link" type="button">
+            Customize
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Consent Preferences Modal -->
+  <div id="consent-modal" class="consent-modal" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <div class="consent-modal-content">
+      <div class="consent-modal-header">
+        <h3 id="modal-title">Cookie Preferences</h3>
+        <button id="consent-modal-close" class="consent-close-btn" type="button" aria-label="Close preferences">×</button>
+      </div>
+      <div class="consent-modal-body">
+        <p id="modal-description">Choose which cookies you want to accept. You can change these settings at any time.</p>
+
+        <div class="consent-category">
+          <div class="consent-category-header">
+            <h4>Essential Cookies</h4>
+            <span class="consent-required">Always Active</span>
+          </div>
+          <p>These cookies are necessary for the website to function and cannot be switched off.</p>
+        </div>
+
+        <div class="consent-category">
+          <div class="consent-category-header">
+            <h4>Analytics Cookies</h4>
+            <label class="consent-toggle">
+              <input type="checkbox" id="analytics-toggle" checked>
+              <span class="consent-slider"></span>
+            </label>
+          </div>
+          <p>Help us understand how visitors interact with our website by collecting anonymous information.</p>
+        </div>
+
+        <div class="consent-category">
+          <div class="consent-category-header">
+            <h4>Marketing Cookies</h4>
+            <label class="consent-toggle">
+              <input type="checkbox" id="marketing-toggle">
+              <span class="consent-slider"></span>
+            </label>
+          </div>
+          <p>Used to track visitors across websites to display relevant advertisements.</p>
+        </div>
+      </div>
+      <div class="consent-modal-footer">
+        <button id="consent-save-preferences" class="consent-btn consent-btn-primary" type="button">
+          Save Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <nav class="main-navigation">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index-2.html" class="brand-link">
+          <span class="brand-icon">🌴</span>
+          <span class="brand-text">Vibing Sarasota</span>
+        </a>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <div class="nav-links desktop-nav">
+        <a href="index-2.html" class="nav-link active">All Categories</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Food & Dining</a>
+          <div class="dropdown-menu">
+            <a href="food-services.html" class="dropdown-link">Food Services</a>
+            <a href="fine-dining.html" class="dropdown-link">Fine Dining</a>
+            <a href="party-vibe.html" class="dropdown-link">Party Vibe</a>
+          </div>
+        </div>
+        <a href="med-spas.html" class="nav-link">Med Spas</a>
+        <a href="golf-courses.html" class="nav-link">Golf</a>
+        <a href="movie-theaters.html" class="nav-link">Movies</a>
+        <a href="meet-people.html" class="nav-link">Meet People</a>
+        <a href="st-armands.html" class="nav-link">St. Armands</a>
+        <a href="beaches.html" class="nav-link">Beaches</a>
+        <a href="family-activities.html" class="nav-link">Family</a>
+        <a href="hidden-gems.html" class="nav-link">Hidden Gems</a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu">
+      <a href="index-2.html" class="mobile-nav-link active">🏠 All Categories</a>
+      <div class="mobile-nav-section">
+        <span class="mobile-nav-header">🍽️ Food & Dining</span>
+        <a href="food-services.html" class="mobile-nav-link sub">🥗 Food Services</a>
+        <a href="fine-dining.html" class="mobile-nav-link sub">✨ Fine Dining</a>
+        <a href="party-vibe.html" class="mobile-nav-link sub">🎉 Party Vibe</a>
+      </div>
+      <a href="med-spas.html" class="mobile-nav-link">💆‍♀️ Med Spas</a>
+      <a href="golf-courses.html" class="mobile-nav-link">⛳ Golf</a>
+      <a href="movie-theaters.html" class="mobile-nav-link">🎬 Movies</a>
+      <a href="meet-people.html" class="mobile-nav-link">🤝 Meet People</a>
+      <a href="st-armands.html" class="mobile-nav-link">🛍️ St. Armands</a>
+      <a href="beaches.html" class="mobile-nav-link">🏖️ Beaches</a>
+      <a href="family-activities.html" class="mobile-nav-link">👨‍👩‍👧‍👦 Family</a>
+      <a href="hidden-gems.html" class="mobile-nav-link">👨‍👩‍👧‍👦 Hidden Gems</a>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Vibing Sarasota</h1>
+        <p class="hero-description">Discover Sarasota's best local businesses through questions answered like a local friend would. Explore 10 curated categories of the finest services, attractions, and experiences our city has to offer. <span style="color: #28a745; font-size: 0.9em; font-weight: 600;">✨ Enhanced with interactive voting!</span></p>
+      </div>
+    </header>
+
+    <!-- Category Grid -->
+    <main class="category-grid-container">
+      <h2 class="section-title">Explore Categories</h2>
+      <div class="category-grid">
+        
+        <!-- Food Services -->
+        <article class="category-card" data-category="food-services">
+          <div class="category-card-content">
+            <div class="category-icon">🥗</div>
+            <h3 class="category-title">Food Services</h3>
+            <p class="category-description">Meal prep, delivery, and personal chefs. From fitness-focused nutrition to luxury private dining experiences.</p>
+            <div class="category-stats">6 businesses featured</div>
+          </div>
+          <a href="food-services.html" class="category-link" aria-label="Explore Food Services">
+            <span>Explore Food Services</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Fine Dining -->
+        <article class="category-card" data-category="fine-dining">
+          <div class="category-card-content">
+            <div class="category-icon">✨</div>
+            <h3 class="category-title">Fine Dining</h3>
+            <p class="category-description">Upscale restaurants for special occasions. Romantic waterfront dining, award-winning chefs, and premium steakhouses.</p>
+            <div class="category-stats">6 restaurants featured</div>
+          </div>
+          <a href="fine-dining.html" class="category-link" aria-label="Explore Fine Dining">
+            <span>Explore Fine Dining</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Party Vibe -->
+        <article class="category-card" data-category="party-vibe">
+          <div class="category-card-content">
+            <div class="category-icon">🎉</div>
+            <h3 class="category-title">Party Vibe</h3>
+            <p class="category-description">Lively restaurants and bars with energetic atmospheres. Rooftop bars, live music venues, and trendy group spots.</p>
+            <div class="category-stats">6 venues featured</div>
+          </div>
+          <a href="party-vibe.html" class="category-link" aria-label="Explore Party Vibe">
+            <span>Explore Party Vibe</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Med Spas -->
+        <article class="category-card" data-category="med-spas">
+          <div class="category-card-content">
+            <div class="category-icon">💆‍♀️</div>
+            <h3 class="category-title">Med Spas</h3>
+            <p class="category-description">Medical spas, wellness centers, and beauty treatments. From luxury aesthetic treatments to advanced wellness services.</p>
+            <div class="category-stats">6 med spas featured</div>
+          </div>
+          <a href="med-spas.html" class="category-link" aria-label="Explore Med Spas">
+            <span>Explore Med Spas</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Golf Courses -->
+        <article class="category-card" data-category="golf-courses">
+          <div class="category-card-content">
+            <div class="category-icon">⛳</div>
+            <h3 class="category-title">Golf Courses</h3>
+            <p class="category-description">Championship golf courses and country clubs. From prestigious private clubs to accessible public courses.</p>
+            <div class="category-stats">7 golf courses featured</div>
+          </div>
+          <a href="golf-courses.html" class="category-link" aria-label="Explore Golf Courses">
+            <span>Explore Golf</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Movie Theaters -->
+        <article class="category-card" data-category="movie-theaters">
+          <div class="category-card-content">
+            <div class="category-icon">🎬</div>
+            <h3 class="category-title">Movie Theaters</h3>
+            <p class="category-description">Cinemas and entertainment venues. From luxury dine-in theaters to independent film venues and IMAX experiences.</p>
+            <div class="category-stats">5 theaters featured</div>
+          </div>
+          <a href="movie-theaters.html" class="category-link" aria-label="Explore Movie Theaters">
+            <span>Explore Movies</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- St. Armands Circle -->
+        <article class="category-card" data-category="st-armands">
+          <div class="category-card-content">
+            <div class="category-icon">🛍️</div>
+            <h3 class="category-title">St. Armands Circle</h3>
+            <p class="category-description">Upscale shopping, fine dining, and unique attractions in this iconic Sarasota destination.</p>
+            <div class="category-stats">8 experiences featured</div>
+          </div>
+          <a href="st-armands.html" class="category-link" aria-label="Explore St. Armands Circle">
+            <span>Explore St. Armands</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Beaches -->
+        <article class="category-card" data-category="beaches">
+          <div class="category-card-content">
+            <div class="category-icon">🏖️</div>
+            <h3 class="category-title">Beaches</h3>
+            <p class="category-description">World-famous beaches with access info, amenities, activities, and hidden gems along the coast.</p>
+            <div class="category-stats">8 beaches featured</div>
+          </div>
+          <a href="beaches.html" class="category-link" aria-label="Explore Beaches">
+            <span>Explore Beaches</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Family Activities -->
+        <article class="category-card" data-category="family-activities">
+          <div class="category-card-content">
+            <div class="category-icon">👨‍👩‍👧‍👦</div>
+            <h3 class="category-title">Family Activities</h3>
+            <p class="category-description">Kid-friendly attractions, parks, and entertainment. Perfect activities for families and children.</p>
+            <div class="category-stats">14 activities featured</div>
+          </div>
+          <a href="family-activities.html" class="category-link" aria-label="Explore Family Activities">
+            <span>Explore Family Fun</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <!-- Meet People -->
+        <article class="category-card" data-category="meet-people">
+          <div class="category-card-content">
+            <div class="category-icon">🤝</div>
+            <h3 class="category-title">Meet People</h3>
+            <p class="category-description">Social activities, networking events, and community gatherings. From solo-friendly venues to sports leagues and art classes.</p>
+            <div class="category-stats">23 venues featured</div>
+          </div>
+          <a href="meet-people.html" class="category-link" aria-label="Explore Meet People">
+            <span>Explore Social Scene</span>
+            <span class="arrow">→</span>
+          </a>
+        </article>
+
+        <article class="category-card" data-category="Hidden-Gems">
+          <div class="category-card-content">
+            <div class="category-icon">🤝</div>
+            <h3 class="category-title">Hidden Gems</h3>
+            <p class="category-description">Social activities, networking events, and community gatherings. From solo-friendly venues to sports leagues and art classes.</p>
+            <div class="category-stats">23 venues featured</div>
+          </div>
+          <a href="hidden-gems.html" class="category-link" aria-label="Hidden Gems">
+             <span>Explore Social Scene</span>
+             <span class="arrow">→</span>
+          </a>
+       </article>
+
+      </div>
+    </main>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Vibing Sarasota</h3>
+          <p>Discover the best local businesses in Sarasota through questions answered like a local friend would. Curated by locals, for locals and visitors alike.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Food & Dining</h4>
+          <ul>
+            <li><a href="food-services.html">Food Services</a></li>
+            <li><a href="fine-dining.html">Fine Dining</a></li>
+            <li><a href="party-vibe.html">Party Vibe</a></li>
+          </ul>
+          <h4>Other Categories</h4>
+          <ul>
+            <li><a href="med-spas.html">Med Spas</a></li>
+            <li><a href="golf-courses.html">Golf Courses</a></li>
+            <li><a href="movie-theaters.html">Movie Theaters</a></li>
+            <li><a href="st-armands.html">St. Armands Circle</a></li>
+            <li><a href="beaches.html">Beaches</a></li>
+            <li><a href="family-activities.html">Family Activities</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>About & Legal</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vibing Sarasota. All rights reserved. |
+           <a href="terms-of-service.html">Terms</a> |
+           <a href="privacy-policy.html">Privacy</a> |
+           <a href="about.html">Contact</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Vibing Sarasota",
+      "url": "https://vibingsarasota.com",
+      "description": "Discover Sarasota's best local businesses across 10 categories through questions answered like a local friend would.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://vibingsarasota.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <!-- JavaScript -->
+  <script src="js/consent-manager.js"></script>
+  <script src="js/gtm-tracking.js"></script>
+  <script src="js/hub.js"></script>
+</body>
+
+<!-- Mirrored from vibingsarasota.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 14:33:34 GMT -->
+</html>

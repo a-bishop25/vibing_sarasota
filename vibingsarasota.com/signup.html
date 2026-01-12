@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Vibing Sarasota</title>
+    <meta name="theme-color" content="#1E3A8A">
+
+    <!-- Fonts & Styles -->
+    <link href="../fonts.googleapis.com/css239d4.css?family=Roboto:wght@400;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-navigation">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="index-2.html" class="brand-link">
+                <span class="brand-icon">🌴</span>
+                <span class="brand-text">Vibing Sarasota</span>
+            </a>
+        </div>
+        <div class="nav-links desktop-nav">
+            <a href="index-2.html" class="nav-link">All Categories</a>
+            <a href="signup.html" class="nav-link active">Sign Up</a>
+            <a href="login.html" class="nav-link">Login</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="container">
+    <header class="category-header">
+        <div class="category-icon">📝</div>
+        <h1>Create Your Account</h1>
+        <p>Sign up to explore Sarasota’s best local businesses and save your favorites.</p>
+    </header>
+
+    <main class="form-section">
+        <form id="signup-form" class="signup-form">
+            <label>
+                Username:<br>
+                <input type="text" name="username" required>
+            </label><br>
+            <label>
+                Display Name:<br>
+                <input type="text" name="displayName" required>
+            </label><br>
+            <label>
+                Email:<br>
+                <input type="email" name="email" required>
+            </label><br>
+            <label>
+                Password:<br>
+                <input type="password" name="password" required>
+            </label><br>
+            <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+
+        <p class="login-link">Already have an account? <a href="login.html">Login here</a>.</p>
+        <p id="message"></p>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Vibing Sarasota</h3>
+                <p>Discover the best local businesses in Sarasota through questions answered like a local friend would.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Other Pages</h4>
+                <ul>
+                    <li><a href="index-2.html">All Categories</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vibing Sarasota. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    const form = document.getElementById("signup-form");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const res = await fetch("/api/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+            if (res.ok) {
+                message.textContent = "✅ User created! Redirecting...";
+                form.reset();
+                // ✅ Save the new user to localStorage immediately
+                if (result.user) {
+                    localStorage.setItem("user", JSON.stringify(result.user));
+                }
+
+                // Redirect to main explore page after short delay
+                setTimeout(() => {
+                    window.location.href = "index-2.html";
+                }, 1500);
+            } else {
+                message.textContent = "❌ Error: " + result.error;
+            }
+        } catch (err) {
+            message.textContent = "❌ Network error";
+            console.error(err);
+        }
+    });
+</script>
+
+
+</body>
+</html>

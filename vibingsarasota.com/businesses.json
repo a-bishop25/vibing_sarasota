@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Siesta Key Beach",
+    "category": "beaches",
+    "description": "White quartz sand, family-friendly, amenities nearby.",
+    "rating": 4.9
+  },
+  {
+    "id": 2,
+    "name": "Lido Beach",
+    "category": "beaches",
+    "description": "Relaxed vibe near St. Armands, great for sunbathing.",
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "name": "Family Fun Park",
+    "category": "family-activities",
+    "description": "Kid-friendly attractions and entertainment.",
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Sunset Coffee",
+    "category": "food-services",
+    "description": "Chill coffee shop with local art and pastries.",
+    "rating": 4.5
+  },
+  {
+    "id": 5,
+    "name": "Sarasota Pizza",
+    "category": "fine-dining",
+    "description": "Upscale pizzeria with gourmet toppings.",
+    "rating": 4.2
+  },
+  {
+    "id": 6,
+    "name": "Manatee Golf Course",
+    "category": "golf-courses",
+    "description": "Fairways and greens are in good condition, carts are comfortable",
+    "rating": 3
+  },
+  {
+    "id": 7,
+    "name": "Hidden Gem Cafe",
+    "category": "hidden-gems",
+    "description": "A tucked-away café serving unique desserts.",
+    "rating": 4.9
+  },
+  {
+    "id": 8,
+    "name": "Revitalize Med Spa",
+    "category": "med-spas",
+    "description": "Luxury treatments for wellness and beauty.",
+    "rating": 4.7
+  },
+  {
+    "id": 9,
+    "name": "Sarasota Meetup Hub",
+    "category": "meet-people",
+    "description": "Social gatherings and networking events.",
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "name": "Sunset Cinema",
+    "category": "movie-theaters",
+    "description": "Luxury dine-in theaters with the latest movies.",
+    "rating": 4.5
+  },
+  {
+    "id": 11,
+    "name": "Rooftop Party Lounge",
+    "category": "party-vibe",
+    "description": "Energetic rooftop bar with live music.",
+    "rating": 4.3
+  },
+  {
+    "id": 12,
+    "name": "St. Armands Circle Boutique",
+    "category": "st-armands",
+    "description": "Upscale shopping, dining, and unique attractions.",
+    "rating": 4.8
+  }
+]

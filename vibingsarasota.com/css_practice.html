@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice - My First Styled Page</title>
+    <!-- We'll add CSS here during class -->
+    <style>
+        .service-card {
+            background-color: lightcoral;
+            padding: 16px;
+            border-radius: 4px;
+        }
+        .service-card h3 {
+            color: aquamarine;
+        }
+        h1 {
+            color: cadetblue;
+        }
+        h2 {
+            color: darkblue;
+        }
+        footer p {
+            color: darkgrey;
+            margin: 30px;
+        }
+        #about{
+            background-color: #E5E7EB;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 5px 21px 6px;
+        }
+        #about h2 {
+            color: #991b1b;
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>Welcome to My CSS Practice Page</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is a paragraph that we'll style with CSS. Right now it looks plain and boring.</p>
+        <p class="highlight">This paragraph has a special class called "highlight".</p>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="service-card">
+            <h3>Web Design</h3>
+            <p>I create beautiful websites that work on all devices.</p>
+        </div>
+        <div class="service-card">
+            <h3>CSS Styling</h3>
+            <p>I make websites look professional with modern CSS.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:student@ncf.edu">student@ncf.edu</a></p>
+        <button class="contact-btn">Send Message</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 My CSS Practice. All rights reserved.</p>
+</footer>
+</body>
+</html>

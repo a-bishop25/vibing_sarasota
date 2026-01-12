@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox Hero Challenge</title>
+    <style>
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-flow: row wrap;
+            align-content: space-around;
+
+            padding: 40px;
+            background-color: #11cf9d;
+            border: 1px solid #100f0f;
+        }
+
+        #hero h1 {
+            margin: 0;
+            color: #100f0f;
+            font-size: 2rem;
+        }
+
+        #hero p {
+            margin: 0;
+            color: #100f0f;
+        }
+
+        #hero a {
+            padding: 10px 16px;
+            background-color: #d000ff; /* overrides inline */
+            color: #100f0f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        #hero a:hover {
+            background-color: #d000ff;
+        }
+
+        #hero img {
+            max-width: 200px;
+            border-radius: 10px;
+            border: 2px solid #100f0f;
+        }
+
+        /* Responsive media query */
+        @media (max-width: 600px) {
+            #hero {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            #hero h1 {
+                font-size: 1.6rem;
+            }
+
+            #hero img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<section id="hero">
+    <h1>Welcome to My Site</h1>
+    <p>This is a flexible hero section!</p>
+    <a href="#">Learn More</a>
+    <img src="https://www.ncf.edu/wp-content/uploads/2024/06/NCF-Letter-Mark.jpg" alt="Hero Image">
+</section>
+</body>
+</html>
